@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego B. Sorte Clothing | Estilo e Performance</title>
+    <style>
+        /* Importação de fonte de luxo */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+        :root {
+            --primary: #000000;
+            --accent: #d32f2f;
+            --whatsapp: #25d366;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body { background-color: #ffffff; color: var(--primary); scroll-behavior: smooth; }
+
+        /* --- SESSÃO HERO --- */
+        .hero {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://i.imgur.com/f88Jylo.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 10vw, 3.5rem);
+            font-weight: 900;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* --- PERFIL DO VENDEDOR --- */
+        .seller-container {
+            max-width: 800px;
+            margin: -60px auto 60px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+        }
+
+        .seller-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        .seller-card:hover { transform: translateY(-5px); }
+
+        .seller-photo-link img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
+        .seller-info h2 { font-size: 1.4rem; font-weight: 900; margin-bottom: 5px; }
+        .seller-info p { color: #555; font-size: 0.9rem; line-height: 1.5; }
+
+        /* --- GRID DE PRODUTOS --- */
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover { box-shadow: 0 25px 50px rgba(0,0,0,0.1); transform: scale(1.02); }
+
+        .card-img-link img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body { padding: 25px; text-align: center; }
+        .card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; height: 45px; }
+        .price { font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 20px; }
+
+        /* --- BOTÕES --- */
+        .btn-buy {
+            display: block;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-buy:hover { background: var(--accent); }
+
+        .btn-insta {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .btn-insta:hover { background: #e1306c; border-color: #e1306c; }
+
+        .footer { text-align: center; padding: 60px 20px; background: #fafafa; }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .seller-card { flex-direction: column; text-align: center; }
+            .hero { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>DIEGO B. SORTE</h1>
+        <p>CLOTHING & PERFORMANCE</p>
+    </div>
+</section>
+
+<div class="seller-container">
+    <div class="seller-card">
+        <a href="https://www.instagram.com/p/DWOSAOhFqUREAmpRpAu0cmRmrR1wDXkoE-EqHA0/?img_index=1&igsh=NXYwdms2d2hubG41" target="_blank" class="seller-photo-link">
+            <img src="https://i.imgur.com/N2kaYvh.jpeg" alt="Diego B. Sorte">
+        </a>
+        <div class="seller-info">
+            <h2>Diego B. Sorte</h2>
+            <p>Especialista em curadoria de moda masculina e alta performance. Clique na foto para ver meu perfil ou no botão abaixo para atendimento exclusivo.</p>
+            <a href="https://wa.me/5574999030495" class="btn-insta" style="background: var(--whatsapp); border: none; font-size: 0.8rem;">WhatsApp Online</a>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title">Coleção Disponível</h2>
+
+<div class="container">
+    <div class="card">
+        <a href="https://i.imgur.com/HWVh4y2.jpeg" target="_blank" class="card-img-link">
+            <img src="https://i.imgur.com/HWVh4y2.jpeg">
+        </a>
+        <div class="card-body">
+            <h3>Camiseta Nike Sportswear Chest Swoosh</h3>
+            <div class="price">R$ 150,00</div>
+            <a href="https://wa.me/5574999030495?text=Tenho interesse na Camiseta Nike" class="btn-buy" target="_blank">Comprar Agora</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <a href="https://i.imgur.com/SGKCO74.jpeg" target="_blank" class="card-img-link">
+            <img src="https://i.imgur.com/SGKCO74.jpeg">
+        </a>
+        <div class="card-body">
+            <h3>Creatina Sabor Morango 350g Integralmedica</h3>
+            <div class="price">R$ 129,99</div>
+            <a href="https://wa.me/5574999030495?text=Tenho interesse na Creatina" class="btn-buy" target="_blank">Comprar Agora</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <a href="https://www.instagram.com/diego_b.sorte" class="btn-insta" target="_blank">SIGA NO INSTAGRAM</a>
+    <p style="margin-top: 20px; font-size: 0.7rem; color: #aaa; letter-spacing: 2px;">DIEGO B. SORTE © 2026</p>
+</div>
+
+</body>
+</html>
